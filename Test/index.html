@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Team</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Team</h2>
+        <form id="teamForm">
+            <label for="team-name">Team name:</label>
+            <input type="text" id="team-name" placeholder="Best team" required>
+
+            <div class="row">
+                <div class="column">
+                    <label for="country">Country:</label>
+                    <select id="country" required>
+                        <option value="">Select</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="US">USA</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label for="timezone">Timezone:</label>
+                    <select id="timezone" required>
+                        <option value="">Select</option>
+                    </select>
+                </div>
+            </div>
+
+            <label>Working Days:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="1"> Sunday</label>
+                <label><input type="checkbox" value="2" checked> Monday</label>
+                <label><input type="checkbox" value="3" checked> Tuesday</label>
+                <label><input type="checkbox" value="4"> Wednesday</label>
+                <label><input type="checkbox" value="5" checked> Thursday</label>
+                <label><input type="checkbox" value="6" checked> Friday</label>
+                <label><input type="checkbox" value="7"> Saturday</label>
+            </div>
+
+            <label>Users:</label>
+            <div id="users-container" class="user-tags">
+                <span>Jane Cooper <button class="remove-user">x</button></span>
+                <span>Esther Howard <button class="remove-user">x</button></span>
+            </div>
+
+            <label>Approvers:</label>
+            <div id="approvers-container" class="user-tags">
+                <span>Brooklyn Simmons <button class="remove-user">x</button></span>
+                <span>Wade Warren <button class="remove-user">x</button></span>
+            </div>
+
+            <label>
+                <input type="checkbox" id="import-holidays"> Automatically import holidays from Locale
+            </label>
+
+            <div class="button-group">
+                <button type="button" class="cancel-button">Cancel</button>
+                <button type="submit" class="save-button">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
